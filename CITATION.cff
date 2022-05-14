@@ -1,0 +1,27 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  Target alignment in truncated kernel ridge regression
+message: >-
+  Please cite the paper "Bayesian Community Detection
+  For Networks With Covariates"
+type: software
+authors:
+  - given-names: Arash A.
+    family-names: Amini
+    email: aaamini@ucla.edu
+    affiliation: UCLA
+    orcid: 'https://orcid.org/0000-0002-2808-8310'
+  - given-names: Richard  
+    family-names: Baumgartner
+    affiliation: Merck & Co., Inc.
+    email: richard_baumgartner@merck.com
+  - given-names: Dai 
+    family-names: Feng
+    email: dai.feng@abbvie.com
+    affiliation: Data and Statistical Sciences, AbbVie Inc.
+doi: 
+date-released: 2022-5-14
+url: "https://github.com/aaamini/krr-target-align"
