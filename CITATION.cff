@@ -5,8 +5,7 @@ cff-version: 1.2.0
 title: >-
   Target alignment in truncated kernel ridge regression
 message: >-
-  Please cite the paper "Bayesian Community Detection
-  For Networks With Covariates"
+  Please cite the paper "Target alignment in truncated kernel ridge regression"
 type: software
 authors:
   - given-names: Arash A.
