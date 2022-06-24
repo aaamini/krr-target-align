@@ -8,7 +8,7 @@ Need following **R** packages: *Matrix, ggplot2, dplyr, tidyverse, plotly, retic
 
 ## Brief explaination of all R files
 
-[krr_funcs.R:] Creat Gaussian Kernels
+[krr_funcs.R:] Creat Gaussian kernels
 
 [simul_pattern3_PhaseTransitonAndDoubleDecent.R:] Generate results and corresponding figures demonstratng the multiple-descent and phase transition of $\lambda$-regularization curve
 
