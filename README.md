@@ -3,7 +3,7 @@ Target Alignment in Kernel Ridge Regression
 
 
 Authors:
-Arash A. Amini, Richard Baumgartner, Dai Feng, 
+Arash A. Amini, Richard Baumgartner, Dai Feng
 
 Contact: aaamini@ucla.edu, richard_baumgartner@merck.com, dai.feng@abbvie.com
 
@@ -14,7 +14,7 @@ This repository contains code for simulation studies in the following manuscript
 Arash A. Amini, Richard Baumgartner, Dai Feng. "Target alignment in truncated kernel ridge regression". 2022.
 
 ## Basic info
-Need following R packages: *Matrix, ggplot2, dplyr, tidyverse, plotly, reticulate*
+Need following **R** packages: *Matrix, ggplot2, dplyr, tidyverse, plotly, reticulate*
 
 ## Brief explaination of all R files
 
