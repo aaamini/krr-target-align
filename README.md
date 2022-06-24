@@ -6,7 +6,7 @@ Arash A. Amini, Richard Baumgartner, Dai Feng. "Target alignment in truncated ke
 ## Basic info
 Need following **R** packages: *Matrix, ggplot2, dplyr, tidyverse, plotly, reticulate*
 
-## Brief explanation of all R files
+## Brief description of all R files
 
 [krr_funcs.R:] Create Gaussian kernels
 
@@ -16,5 +16,5 @@ Need following **R** packages: *Matrix, ggplot2, dplyr, tidyverse, plotly, retic
 
 [test_ta.R:] Generate results and corresponding figures demonstrating empirical vs. theoretical results
 
-## Brief explanation of src code
+## Brief description of src code
 [krr_calc.cpp:] C++ code for computation of MSEs
