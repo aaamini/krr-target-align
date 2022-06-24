@@ -8,13 +8,13 @@ Need following **R** packages: *Matrix, ggplot2, dplyr, tidyverse, plotly, retic
 
 ## Brief explaination of all R files
 
-[krr_funcs.R:] Creat Gaussian kernels
+[krr_funcs.R:] Create Gaussian kernels
 
-[simul_pattern3_PhaseTransitonAndDoubleDecent.R:] Generate results and corresponding figures demonstratng the multiple-descent and phase transition of $\lambda$-regularization curve
+[simul_pattern3_PhaseTransitonAndDoubleDecent.R:] Generate results and corresponding figures demonstrating the multiple-descent and phase transition of $\lambda$-regularization curve
 
-[simul_twoSegment_truncation r_mseVSr_RatioSigmaToN.R:] Generate results and corresponding figures demonstratng the double-descent and phase transition of $r$-regularization curves
+[simul_twoSegment_truncation r_mseVSr_RatioSigmaToN.R:] Generate results and corresponding figures demonstrating the double-descent and phase transition of $r$-regularization curves
 
-[test_ta.R:] Generate results and corresponding figures demonstratng emprical vs. theroetical results
+[test_ta.R:] Generate results and corresponding figures demonstrating empirical vs. theroetical results
 
 ## Brief explaination of src code
 [krr_calc.cpp:] C++ code for computation of MSEs
