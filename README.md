@@ -4,7 +4,7 @@ This repository contains code for simulation studies in the following manuscript
 Arash A. Amini, Richard Baumgartner, Dai Feng. "Target alignment in truncated kernel ridge regression". 2022.
 
 ## Basic info
-Need following **R** packages: *Matrix, ggplot2, dplyr, tidyverse, plotly, reticulate*
+Need installation of following **R** packages: *Matrix, ggplot2, dplyr, tidyverse, plotly, reticulate*
 
 ## Brief description of all R files
 
