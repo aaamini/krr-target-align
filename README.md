@@ -10,9 +10,9 @@ Need installation of following **R** packages: *Matrix, ggplot2, dplyr, tidyvers
 
 [krr_funcs.R:] Create Gaussian kernels
 
-[simul_pattern3_PhaseTransitonAndDoubleDecent.R:] Generate results and corresponding figures demonstrating the multiple-descent and phase transition of $\lambda$-regularization curve
+[simul_pattern3_PhaseTransitonAndDoubleDecent.R:] Generate results and corresponding figures demonstrating the multiple-descent and phase transition of $\lambda-$regularization curve
 
-[simul_twoSegment_truncation r_mseVSr_RatioSigmaToN.R:] Generate results and corresponding figures demonstrating the double-descent and phase transition of $r$-regularization curves
+[simul_twoSegment_truncation r_mseVSr_RatioSigmaToN.R:] Generate results and corresponding figures demonstrating the double-descent and phase transition of $r-$regularization curves
 
 [test_ta.R:] Generate results and corresponding figures demonstrating empirical vs. theoretical results
 
