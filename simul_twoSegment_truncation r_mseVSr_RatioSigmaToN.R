@@ -31,7 +31,6 @@ lambda_vec = 10^seq(-5, 1, length=100) # length used to be 4000
 
 #sample size
 n=200
-#n=600
 
 #alignment width of each segment
 k=10
@@ -79,7 +78,7 @@ rseq <- seq(1, 50, by=1)
 # Computes the entire MSE surface in C++
 ex_n_mse = get_theo_mse_3d(lambda_vec, rseq, sig_vec^2/n, v, mu)
 
-# This is inefficient ... TODO: Create Data fame directly in C++
+# This is inefficient ... TODO: Create Dataframe directly in C++
 for (ri in seq_along(rseq)) {
   for (si in seq_along(sig_vec)) {
     res = bind_rows(res, data.frame(lambda = lambda_vec,
@@ -89,48 +88,10 @@ for (ri in seq_along(rseq)) {
   }
 }
 
-# for(r in rseq){
-#   #get "r" eigen vectors and values
-#   U_r = U[ , 1:r]
-#   mu_r = mu[1:r]
-# 
-#   for(sig in sig_vec){
-#     ex_n_mse = sapply(lambda_vec, function(lam) get_theo_mse(lam, v, mu_r, sig^2/n))
-# 
-#     res = bind_rows(res,
-#                     data.frame(lambda = lambda_vec, n_mse = ex_n_mse, sig=sig,
-#                                r=r))
-# 
-#   }
-# 
-# }
-
-# res$sig2 <- as.factor(paste0("noise sd ratio=", res$sig))
 res$sig2 = round(res$sig / sqrt(n), 3)
 res$sig3 = paste0("sigma/sqrt(n)=", res$sig2)
 res$lambda2 <- -log(res$lambda)
 res$r2 <- factor(paste0("r=", res$r), levels=paste0("r=", rev(rseq)))
-
-# save(res, file=paste0(ppathResults, 
-#                       "/mseVSr-twoPieceAlign", 
-#                       "_k",k,"_l1",l1, "_l2",l2,"_n", n, "_ratioSigmaToN.rda"))
-
-#-------------------------------------------------------------------------------
-#-------------------------------------Draw plots--------------------------------
-# 
-# rm(list=ls())
-# library(dplyr)
-# library(ggplot2)
-# library(plotly)
-# 
-# folder <- 'D:/Abbvie2020/papers/Kernel_target alignment_Arash'
-# ppathResults <- file.path(folder,"simulation","results/twoSegment/")
-
-
-# n=200
-# #n=600
-# k=10; l1=0; l2=30
-# load(file=paste0(ppathResults, "/mseVSr-twoPieceAlign", "_k",k,"_l1",l1, "_l2",l2,"_n", n, "_ratioSigmaToN.rda"))
 
 
 lambda.pick <- 1
@@ -139,6 +100,7 @@ res.pick <- res %>% filter(lambda2==lambda.pick.val)
     
 comb <- paste0("k=", k, ", l1=", l1, ", l2=", l2, ", n=", n, ", -log(\\lambda)=", round(lambda.pick.val,2))
 lambda <- round(lambda.pick.val,1)
+
 #----------plot MSE vs. -log(lambda) overlay all noise levels together
 plt <- res.pick %>% filter(sig2 %in% c(0, 0.06, 0.12, 0.18, 0.24, 0.3)) %>%
   ggplot(aes(x = r, y = n_mse)) + 
@@ -146,7 +108,6 @@ plt <- res.pick %>% filter(sig2 %in% c(0, 0.06, 0.12, 0.18, 0.24, 0.3)) %>%
   geom_line(size = 1.2) + 
   theme_minimal() + 
   ggplot2::theme(legend.background = ggplot2::element_blank(),
-                 #legend.title = ggplot2::element_blank(),
                  legend.position = "bottom") + 
   scale_colour_gradientn(name=expression(sigma), 
                          colours=scales::muted(rainbow(10), l = 70, c = 80)) +
@@ -207,11 +168,5 @@ fig <- plot_ly(x=unique(res.pick$r),
 
 
 save_image(fig, file.path(ppathFigures, "mseVSr_twoseg_contour.pdf"), width = 500)
-#
 
-    
-    
-    
-    
-    
    

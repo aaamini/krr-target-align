@@ -55,7 +55,7 @@ v = matrix(VV, nrow=length(VV), ncol=1)
 #store results in res
 res <- NULL
 #different values of lambda, the regularization parameter of the kernel ridge regression
-rseq <- seq(1, 25, by=1)
+rseq <- seq(1, 15, by=1)
 lambda_vec = 10^seq(-5, 1, length=5000)
 sig = 2
 
